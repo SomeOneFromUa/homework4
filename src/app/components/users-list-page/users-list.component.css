@@ -1,0 +1,15 @@
+.list-block {
+  background-color: mediumpurple;
+  width: 20%;
+}
+.list-block-item {
+  color: white;
+  border-bottom: white 1px solid;
+}
+.user-card-block {
+  width: 50%;
+  display: flex;
+}
+.users-list-conatianer {
+  display: flex;
+}

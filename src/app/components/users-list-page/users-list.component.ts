@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {UserService} from '../../services/user.service';
 import {IUser} from '../../interfaces/user';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-users-list',
@@ -10,11 +10,11 @@ import {Router} from '@angular/router';
 })
 export class UsersListComponent {
 users: IUser[];
-  constructor(private userService: UserService, private router: Router) {
-    this.userService.getUsers().subscribe(users => this.users = users);
+  constructor(private activatedRoute: ActivatedRoute, private router: Router) {
+    this.activatedRoute.data.subscribe(value => this.users = value.users);
   }
 
   nawUser(user: IUser): void {
-    this.router.navigate(['users', user.id]);
+    this.router.navigate(['users', user.id], {state: user});
   }
 }

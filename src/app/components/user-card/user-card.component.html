@@ -1,1 +1,13 @@
-<p>user-card works!</p>
+<mat-card class="user-card">
+  <mat-card-title>{{user.username}}</mat-card-title>
+  <mat-card-subtitletitle>{{user.name}}</mat-card-subtitletitle>
+  <mat-card-content>
+    <p>{{user.email}}</p>
+    <p>{{user.company?.name}}</p>
+    <p>{{user.phone}}</p>
+    <p>{{user.address?.city}}</p>
+    <p>{{user.address?.street}}</p>
+  </mat-card-content>
+  <button mat-flat-button (click)="showPosts()" class="mat-button">show posts:</button>
+  <router-outlet></router-outlet>
+</mat-card>

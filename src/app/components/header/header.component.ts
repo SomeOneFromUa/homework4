@@ -16,5 +16,6 @@ export class HeaderComponent {
 
   nawPosts(): void {
     this.router.navigate(['posts']);
+    history.state.id = undefined;
   }
 }

@@ -13,6 +13,6 @@ export class PostService {
     return this.httpClient.get<IPost[]>('https://jsonplaceholder.typicode.com/posts');
   }
   getPostsOfUser = (userId: number): Observable<IPost[]> => {
-    return this.httpClient.get<IPost[]>(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`)
+    return this.httpClient.get<IPost[]>(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`);
   }
 }

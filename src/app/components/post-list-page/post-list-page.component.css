@@ -1,0 +1,16 @@
+.post-list {
+  background-color: mediumpurple;
+  width: 20%;
+}
+.post-list-item {
+  color: white;
+  font-size: 12px;
+  border-bottom: white 1px solid;
+}
+.post-card-block {
+  width: 50%;
+  display: flex;
+}
+.post-list-conatianer {
+  display: flex;
+}

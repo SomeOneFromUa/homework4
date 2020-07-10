@@ -1,0 +1,9 @@
+
+  <div class="users-list-conatianer">
+    <mat-list class="list-block">
+      <mat-list-item class="list-block-item" *ngFor="let user of users" (click)="nawUser(user)">{{user.username}}</mat-list-item>
+    </mat-list>
+    <div class="user-card-block">
+      <router-outlet></router-outlet>
+    </div>
+  </div>

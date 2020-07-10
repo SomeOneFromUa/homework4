@@ -1,0 +1,10 @@
+<mat-card>
+  <mat-card-title>{{post.title}}</mat-card-title>
+  <mat-card-content>
+    {{post.body}}
+  </mat-card-content>
+  <button (click)="onCommetns(post.id)" mat-flat-button>show comments</button>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</mat-card>
